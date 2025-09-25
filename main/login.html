@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARWA - Login</title>
+    <link rel="stylesheet" href="../../css/login-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="nav-link">
+                <a href="../../index.html"><i class="fas fa-arrow-left"></i>Go Back</a>
+            </div>
+            <h1 class="logo">LOGO</h1>
+            <h2 class="login-title">Login</h2>
+            
+            <form class="login-form" onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <span class="error-message">Display Error</span>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <span class="error-message">Display Error</span>
+                </div>
+                
+                <button type="submit" class="login-btn">Login</button>
+                
+                <div class="forgot-password">
+                    <a href="../forgot-password/forgot-password.html">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            // Get form inputs
+            const username = event.target.querySelector('input[type="text"]').value;
+            const password = event.target.querySelector('input[type="password"]').value;
+            
+            // Simple validation (you can enhance this with real authentication)
+            if (username && password) {
+                // For demo purposes, redirect to dashboard
+                // In a real application, you would validate credentials here
+                window.location.href = '../dashboard/dashboard.html';
+            } else {
+                // Show error message
+                alert('Please enter both username and password');
+            }
+        }
+    </script>
+</body>
+</html>

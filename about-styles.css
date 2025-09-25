@@ -1,0 +1,266 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    background-color: #21616a;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav i {
+    font-size: 1.1rem;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 3rem;
+    color: #21616a;
+}
+
+.feature-card h3 {
+    color: #21616a;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    padding: 2rem;
+}
+
+.about-section h2 {
+    color: #21616a;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+    padding: 2rem;
+}
+
+.contact-section h2 {
+    color: #21616a;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item i {
+    font-size: 1.3rem;
+    color: #21616a;
+    min-width: 20px;
+}
+
+.contact-item span, .contact-item a {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #21616a;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #1a4f57;
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #21616a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .features {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+        padding: 0.5rem 0;
+        align-items: center;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 350px;
+        min-height: 280px;
+    }
+    
+    .about-section, .contact-section {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .about-section h2, .contact-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-section p {
+        font-size: 1rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    .features {
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+    
+    .feature-card {
+        padding: 1.25rem;
+        width: 100%;
+        max-width: 300px;
+        min-height: 260px;
+    }
+    
+    .feature-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .about-section h2, .contact-section h2 {
+        font-size: 1.6rem;
+    }
+}

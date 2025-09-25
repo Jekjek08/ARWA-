@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARWA - Verify Code</title>
+    <link rel="stylesheet" href="../../css/verify-code-styles.css">
+    <link rel="stylesheet" href="../../css/nav-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="verify-container">
+        <div class="verify-card">
+            <div class="nav-link">
+                <a href="forgot-password.html"><i class="fas fa-arrow-left"></i>Go Back</a>
+            </div>
+            
+            <div class="header">
+                <h1 class="logo">LOGO</h1>
+                <h2>Verify Code</h2>
+                <p>We've sent a verification code to your email. Please enter it below to reset your password.</p>
+            </div>
+            
+            <form class="verify-form" onsubmit="handleVerifySubmit(event)">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-key"></i>
+                        <input type="text" placeholder="Enter verification code" required maxlength="6">
+                    </div>
+                    <span class="error-message">Display Error</span>
+                </div>
+                
+                <button type="submit" class="verify-btn">Verify Code</button>
+                
+                <div class="additional-links">
+                    <button type="button" class="resend-btn">Resend Code</button>
+                    <a href="../main/login.html">Back to Login</a>
+                </div>
+            </form>
+            
+            <script src="../../js/verify-code.js"></script>
+        </div>
+    </div>
+</body>
+</html>

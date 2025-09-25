@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARWA - Contact</title>
+    <link rel="stylesheet" href="../../css/contact-styles.css">
+    <link rel="stylesheet" href="../../css/nav-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-header">
+                    <h1 class="logo">LOGO</h1>
+                    <h2>Get in Touch</h2>
+                    <p>Have questions or need assistance? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                </div>
+
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <div class="input-field">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="First Name" required>
+                            </div>
+                            <span class="error-message">Display Error</span>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-field">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Last Name" required>
+                            </div>
+                            <span class="error-message">Display Error</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <span class="error-message">Display Error</span>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <span class="error-message">Display Error</span>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fas fa-tag"></i>
+                            <select required>
+                                <option value="">Select Subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <span class="error-message">Display Error</span>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field message-field">
+                            <i class="fas fa-comment"></i>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <span class="error-message">Display Error</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <div class="contact-info-section">
+                    <h3>Other Ways to Reach Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span>0967-661-8309 / 0922-495-3877</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span>info@arwawater.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Address</span>
+                                <span>145 C BOLADO AVE. TATALA, BINANGONAN RIZAL</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-facebook"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Social Media</span>
+                                <a href="#" target="_blank">Follow us on Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ARWA System All rights reserved.</p>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>
